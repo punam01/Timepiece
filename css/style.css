@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+}
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-size: 20px;
+	background-color:#330715;	
+}
+.clock
+{
+	width: 350px;
+	height:350px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #F1EBEA; 
+	background-size: cover;
+	position: fixed;
+	box-shadow: inset 0px -10px 20px rgba(0,0,0,0.4),
+	 inset -10px 0px 20px rgba(255,255,255,0.9),
+	 0px 10px 20px rgba(0,0,0,0.9);
+		border-radius: 20%;
+}
+.clock .num
+{
+	width: 350px;
+	height:350px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.clock .num .t12
+{
+	width: 25px;
+	height:25px;
+	position: absolute;
+	top:30px;
+	color:#330715;
+}
+.clock .num .t9
+{
+	width: 25px;
+	height:25px;
+	position: absolute;
+	top:center;
+	left:50px;
+	color:#330715;
+}
+.clock .num .t3
+{
+	width: 25px;
+	height:25px;
+	position: absolute;
+	top:center;
+	right:50px;
+	color:#330715;
+}
+.clock .num .t6
+{
+	width: 25px;
+	height:25px;
+	position: absolute;
+	bottom:50px;
+	color:#330715;
+}
+.clock:before
+{
+	content: '';
+	position: absolute;
+	width: 13px;
+	height: 13px;
+	background: #fff;
+	background-color: #747373;
+	background-image: linear-gradient(to top right,#747373, #fff);
+	border:4px solid #2B0404;
+	border-radius: 50%;
+	z-index: 10000;
+}
+.clock .circle,
+.clock .hour,
+.clock .min,
+.clock .sec
+{
+	position: absolute;
+}
+.clock .circle
+{
+	width: 160px;
+	height: 160px;
+}
+.clock .hour, .hr
+{
+	width: 160px;
+	height: 160px;
+}
+.clock .min, .mn
+{
+	width: 190px;
+	height: 190px;
+}
+.clock .sec, .sc
+{
+	width: 230px;
+	height: 230px;
+}
+
+.hr, .sc, .mn 
+{
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	border-radius: 50%;
+}
+.clock .circle
+{
+	border-radius: 50%;
+	background-color:  #F1EBEA;
+	box-shadow: 0 -15px 15px rgba(255,255,255,0.5),
+	 inset 0 -15px 15px rgba(255,255,255,0.5);
+}
+
+.hr:before
+{
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 80px;
+	background-color: #524D4B;
+	z-index: 10;
+	box-shadow:  5px 0px 4px rgba(0,0,0,0.4);
+	border-radius: 6px 6px 0 0;
+
+}
+.mn:before
+{
+	content: '';
+	position: absolute;
+	width: 4px;
+	height: 90px;
+	background-color: #524D4B;
+	z-index: 11;
+	box-shadow:  5px 0px 4px rgba(0,0,0,0.4);
+	border-radius: 6px 6px 0 0;
+
+}
+.sc:before
+{
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 150px;
+	background-color: #E16C60;
+	z-index: 12;
+	box-shadow:  5px 0px 4px rgba(0,0,0,0.4);
+	border-radius: 6px 6px 0 0;
+
+}
